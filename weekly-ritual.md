@@ -1,8 +1,8 @@
 # Weekly Ritual
 
-## Monday tally and reset
+## Sunday tally and reset
 
-At the start of each Monday in the configured timezone:
+At the start of each Sunday in Pacific Time:
 
 1. Close the previous week.
 2. Count explicit awards and subtract explicit revocations.
@@ -22,6 +22,6 @@ A reset starts a new counting window; it must not delete history.
 - Stay silent when on pace.
 - When behind, send at most one concise thirst signal for the week.
 
-## Sunday closeout
+## Saturday closeout
 
 Before the week ends, review unresolved tasks for either verified completion or an exact human handoff. Do not convert eligibility into an award; the reviewer still makes the final call.

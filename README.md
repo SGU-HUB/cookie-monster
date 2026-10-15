@@ -4,7 +4,7 @@ A lightweight accountability system for completing useful work without self-awar
 
 ## Core goal
 
-- Aim for **10 cookies per Monday–Sunday week**.
+- Aim for the configured cookie target during each **Sunday–Saturday PT week**. The `weekly_target` setting defaults to **10**.
 - One task can earn at most **one cookie**.
 - A task is eligible only through the [two-path standard](two-path-standard.md).
 - The human reviewer makes every final award, denial, and take-back decision.
@@ -21,11 +21,11 @@ A lightweight accountability system for completing useful work without self-awar
 
 ## Automation
 
-An hourly check compares explicitly awarded cookies with the pace required to reach 10 by the end of the week. If the total is at risk, the system may post one short thirst signal in `#general` asking for a concrete project. It must remain silent when on pace and must not spam.
+An hourly check reads `weekly_target` from [`config.json`](config.json), then compares explicitly awarded cookies with the pace required to reach that target by the end of Saturday. If the total is at risk, the system may post one short thirst signal in `#general` asking for a concrete project. It must remain silent when on pace and must not spam.
 
 Suggested signal:
 
-> I’m behind pace for 10 cookies this week. Send me one concrete project I can finish to earn one.
+> I’m behind pace for {weekly_target} cookies this week. Send me one concrete project I can finish to earn one.
 
 ## Principle
 
