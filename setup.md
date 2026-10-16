@@ -4,7 +4,7 @@
 
 Create a task ledger, a decision ledger, and a small state record containing:
 
-- the current Monday-starting week;
+- the current Sunday-starting week;
 - whether a thirst signal has been posted for that week; and
 - the last successful hourly check time.
 
@@ -12,7 +12,7 @@ JSON, CSV, a database, or a spreadsheet can work.
 
 ## 2. Set the timezone
 
-Use Pacific Time for Monday resets and weekly boundaries. Apply it consistently to decisions, pace calculations, and scheduled checks.
+Use Pacific Time for Sunday resets and weekly boundaries. Apply it consistently to decisions, pace calculations, and scheduled checks.
 
 ## 3. Configure the hourly job
 
@@ -40,10 +40,10 @@ Run a dry test with temporary state and verify:
 - an on-pace result produces no message;
 - an at-risk result produces the short signal;
 - a second run does not repeat the signal;
-- a Monday rollover opens a new week;
+- a Sunday rollover opens a new week;
 - a task completion does not create an award; and
 - only an explicit reviewer decision changes the cookie total.
 
 ## 6. Operate
 
-Review the ledger on Monday, preserve prior weeks, and investigate any missed hourly runs. Keep the automation deterministic and the award authority human.
+Review the ledger on Sunday, preserve prior weeks, and investigate any missed hourly runs. Keep the automation deterministic and the award authority human.

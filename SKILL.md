@@ -30,7 +30,7 @@ Do not use it to infer an award from praise, task completion, silence, or an age
 ## Canonical Rules
 
 - Target: read `weekly_target` from `config.json`; the default is 10.
-- Week: Monday 00:00 through the following Monday 00:00 in `America/Los_Angeles`.
+- Week: Sunday 00:00 through Saturday 23:59 in `America/Los_Angeles`.
 - Value: an eligible task can earn at most one cookie.
 - Authority: only the designated human reviewer may award, deny, defer, correct, or revoke cookies.
 - Independence: another agent may audit the evidence and arithmetic but may not create a decision.
@@ -68,7 +68,7 @@ Eligibility is not an award. Wait for the reviewer’s explicit decision.
 
 ### Audit a week
 
-1. Determine the Monday–Sunday Pacific window.
+1. Determine the Sunday–Saturday Pacific window.
 2. Fetch all reviewer-authored Discord messages in the approved channel for that window.
 3. Identify only explicit cookie decisions; exclude agent claims, suggested awards, and ambiguous praise.
 4. Build a chronological evidence list keyed by Discord message ID, then deduplicate by that ID.
@@ -79,7 +79,7 @@ Eligibility is not an award. Wait for the reviewer’s explicit decision.
 ### Run the hourly pace check
 
 1. Read the current target and independently audited current-week total.
-2. Compare the total with the linear pace needed to reach the target by Sunday night.
+2. Compare the total with the linear pace needed to reach the target by Saturday night.
 3. Stay silent when on pace.
 4. When behind, post no more than one short thirst signal during the week in the configured request channel.
 5. The signal asks for a concrete project; it never awards a cookie or claims eligibility.
@@ -90,7 +90,7 @@ Suggested signal:
 
 ### Reset the week
 
-1. At Monday 00:00 Pacific, close the prior week with its independently verified final total.
+1. At Sunday 00:00 Pacific, close the prior week with its independently verified final total.
 2. Preserve all prior evidence and ledger entries.
 3. Start the new week at zero and clear only the weekly thirst-signal marker.
 4. Verify that no prior-week decision appears in the new-week arithmetic.
@@ -111,6 +111,6 @@ A cookie operation is complete only when:
 - the explicit reviewer decision is located;
 - the arithmetic is reproducible from deduplicated evidence;
 - any accessible private ledger matches the evidence exactly;
-- the Monday–Sunday Pacific boundary is correct;
+- the Sunday–Saturday Pacific boundary is correct;
 - no agent awarded itself a cookie; and
 - an independent agent with Discord access can reproduce the reported total.
