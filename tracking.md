@@ -15,7 +15,7 @@ Use a small ledger in JSON, CSV, a database, or a spreadsheet. The storage forma
 ## Decision fields
 
 - task label
-- Sunday-starting week
+- Monday-starting week
 - decision: awarded, denied, deferred, or revoked
 - decision source
 - reason
@@ -27,10 +27,10 @@ Count explicit awards for the current week, then subtract explicit revocations t
 
 ## Hourly pace check
 
-1. Determine the current Sunday–Saturday week in Pacific Time.
+1. Determine the current Monday–Sunday week in Pacific Time.
 2. Read the current week’s explicit decisions.
 3. Calculate the net awarded total.
-4. Read `weekly_target` from `config.json` and compare the total with the configured pace from Sunday 00:00 through the end of Saturday.
+4. Read `weekly_target` from `config.json` and compare the total with the configured pace from Monday 00:00 through the end of Sunday.
 5. If the total is on pace, stay silent.
 6. If the total is behind pace, check the weekly signal record.
 7. If no signal has been sent for the current week, post one short thirst signal in `#general` and record it.
