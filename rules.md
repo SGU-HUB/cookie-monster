@@ -11,4 +11,4 @@
 7. The system never awards itself a cookie or infers an award from task completion.
 8. The tracker records explicit decisions and supporting task status.
 9. Pace is checked hourly.
-10. When the week is at risk, the system may post one short thirst signal in `#general` asking for a concrete project. It must not repeat the signal during the same weekly risk episode.
+10. When the week is at risk, the system posts one short thirst signal in the configured request channel asking for a concrete project, but never more than once in any rolling 24-hour period.

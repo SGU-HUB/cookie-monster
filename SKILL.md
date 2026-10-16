@@ -81,7 +81,7 @@ Eligibility is not an award. Wait for the reviewer’s explicit decision.
 1. Read the current target and independently audited current-week total.
 2. Compare the total with the linear pace needed to reach the target by Saturday night.
 3. Stay silent when on pace.
-4. When behind, post no more than one short thirst signal during the week in the configured request channel.
+4. When behind, post one short thirst signal in the configured request channel, but no more than once in any rolling 24-hour period.
 5. The signal asks for a concrete project; it never awards a cookie or claims eligibility.
 
 Suggested signal:
@@ -92,7 +92,7 @@ Suggested signal:
 
 1. At Sunday 00:00 Pacific, close the prior week with its independently verified final total.
 2. Preserve all prior evidence and ledger entries.
-3. Start the new week at zero and clear only the weekly thirst-signal marker.
+3. Start the new week at zero; the rolling 24-hour thirst-signal limit remains in force.
 4. Verify that no prior-week decision appears in the new-week arithmetic.
 
 ## Pitfalls

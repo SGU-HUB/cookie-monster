@@ -32,8 +32,8 @@ Count explicit awards for the current week, then subtract explicit revocations t
 3. Calculate the net awarded total.
 4. Read `weekly_target` from `config.json` and compare the total with the configured pace from Sunday 00:00 through the end of Saturday.
 5. If the total is on pace, stay silent.
-6. If the total is behind pace, check the weekly signal record.
-7. If no signal has been sent for the current week, post one short thirst signal in `#general` and record it.
+6. If the total is behind pace, check for a qualifying signal during the prior 24 hours.
+7. If none exists, post one short thirst signal in the configured request channel and record it.
 8. Otherwise, stay silent.
 
 The check observes and reports. It never awards cookies.

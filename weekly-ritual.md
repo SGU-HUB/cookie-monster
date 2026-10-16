@@ -20,7 +20,7 @@ A reset starts a new counting window; it must not delete history.
 - Keep task states current.
 - Run the pace check every hour.
 - Stay silent when on pace.
-- When behind, send at most one concise thirst signal for the week.
+- When behind, send one concise thirst signal, but never more than once in any rolling 24-hour period.
 
 ## Saturday closeout
 

@@ -5,7 +5,7 @@
 Create a task ledger, a decision ledger, and a small state record containing:
 
 - the current Sunday-starting week;
-- whether a thirst signal has been posted for that week; and
+- the timestamp of the most recent qualifying thirst signal; and
 - the last successful hourly check time.
 
 JSON, CSV, a database, or a spreadsheet can work.
